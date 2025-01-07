@@ -1,14 +1,30 @@
 import threading
-from scapy.all import sniff, wrpcap
-
+from scapy.all import  sniff, wrpcap
+from scapy.layers.dns import DNS
+from collections import defaultdict
 #Define a list to store captured packets
 captured_packets = []
+
+#DNS tracker
+dns_tracker = defaultdict(set)  # Tracks DNS responses for potential spoofing
+
+#DNS Thresholds
+DNS_SPOOF_THRESHOLD = 3 #multiple IPs in a single DNS response
 
 
 def packet_callback(packet):
     # Append each captured packet to the list
     captured_packets.append(packet)
-    #print(packet.summary())
+
+    # Detect DNS spoofing
+    if packet.haslayer(DNS) and packet[DNS].qr == 1: #DNS response
+        domain = packet[DNS].qd.qname.decode() if packet[DNS].qd else "Unknown"
+        answers = [packet[DNS].an[i].rdata for i in range(packet[DNS].ancount)]
+        dns_tracker[domain].update(answers)
+        if(len(dns_tracker[domain])) > DNS_SPOOF_THRESHOLD:
+            print(f"\n[ALERT] Potential DNS spoofing detected for {domain}")
+
+
 def sniff_packets():
     #Captures sniff packets indefinitely
     sniff(prn=packet_callback, store=False)
