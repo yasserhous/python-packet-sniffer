@@ -4,7 +4,7 @@ The purpose of this project is educational. To understand network packets, I cre
 
 Table of Contents  
 [Description](#description)  
-[Technologies Used](#technologiesused)  
+[Technologies](#technologies)  
 Features  
 Installation  
 Usage  
@@ -19,7 +19,7 @@ What the project is
 Why it was created
 The specific problem it addresses
 The main goals or objectives  
-## Technologies Used
+## Technologies
 List the technologies, tools, and libraries your project uses. Example:
 
 Python
