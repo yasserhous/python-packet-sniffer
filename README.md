@@ -1,6 +1,6 @@
 # Project Title
 
-A brief description of your project, its purpose, and the problem it solves.
+The purpose of this project is educational. To understand network packets, I created a packet sniffer script that monitors the traffic of my device and detects possible DNS Spoofing.
 
 Table of Contents
 Description
