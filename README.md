@@ -4,7 +4,7 @@ The purpose of this project is educational. To understand network packets, I cre
 
 Table of Contents  
 [Description](#description)  
-[Technologies Used](#technologies)  
+[Technologies Used](#technologiesused)  
 Features  
 Installation  
 Usage  
