@@ -1,4 +1,4 @@
-Project Title
+# Project Title
 
 A brief description of your project, its purpose, and the problem it solves.
 
