@@ -12,7 +12,7 @@ Contributing
 License  
 Acknowledgements  
 
-##Description
+## Description  
 Provide a detailed description of the project, including:
 
 What the project is
