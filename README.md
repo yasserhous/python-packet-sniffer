@@ -2,42 +2,15 @@
 
 The purpose of this project is educational. To understand network packets, I created a packet sniffer script that monitors the traffic of my device and detects possible DNS Spoofing.
 
-Table of Contents
-[Description](#description)
-Technologies Used
-Features
-Installation
-Usage
-Contributing
-License
-Acknowledgements
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Table of Contents  
+[Description](#description)  
+Technologies Used  
+Features  
+Installation  
+Usage  
+Contributing  
+License  
+Acknowledgements  
 
 ##Description
 Provide a detailed description of the project, including:
